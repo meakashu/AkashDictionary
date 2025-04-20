@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Akash Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        main.static-page {
+            max-width: 800px; margin: 2rem auto; padding: 2rem;
+            background-color: var(--card-bg-light); border: 1px solid var(--border-light);
+            border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            animation: slideUpFadeIn 0.5s ease forwards;
+        }
+        body.dark-mode main.static-page { background-color: var(--card-bg-dark); border-color: var(--border-dark); }
+        main.static-page h2 { border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        body.dark-mode main.static-page h2 { border-bottom-color: var(--secondary-color); }
+        main.static-page p { margin-bottom: 1rem; line-height: 1.6; }
+        main.static-page h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-top">
+            <h1><a href="index.html" style="color: inherit; text-decoration:none;">Akash Dictionary 📖</a></h1>
+        </div>
+        <nav class="header-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main class="static-page">
+        <h2>Privacy Policy</h2>
+        <p>This Privacy Policy describes how Akash Dictionary collects, uses, and discloses your information.</p>
+
+        <h3>Information We Collect</h3>
+        <p>We may collect personal information that you voluntarily provide to us, such as when you use the search history feature. The only information stored locally on your device via `localStorage` is your recent search terms.</p>
+        <p>We do not collect any personal identification information (PII) beyond what is stored in your browser's `localStorage` for the history feature. This data is not transmitted to us or any third party.</p>
+
+        <h3>How We Use Information</h3>
+        <p>The search history stored in `localStorage` is used solely to provide the "Recent Searches" feature within the application on your device.</p>
+
+        <h3>Third-Party Services</h3>
+        <p>This website uses the Free Dictionary API (dictionaryapi.dev). Please refer to their privacy policy for information on how they handle data.</p>
+        <p>We also use Font Awesome for icons. Please refer to their privacy policy regarding their services.</p>
+
+        <h3>Data Storage and Security</h3>
+        <p>Search history is stored in your web browser's `localStorage`. You can clear this data at any time using the "Clear History" button within the application or by clearing your browser's data.</p>
+
+        <h3>Changes to This Policy</h3>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, please contact Akash (provide contact method if desired).</p>
+        <!-- Update policy details as needed -->
+    </main>
+
+    <footer>
+         <p>
+            Powered by <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener noreferrer">Free Dictionary API</a> |
+            © <span id="currentYear"></span> Akash developer. All rights reserved.
+        </p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cy = document.getElementById('currentYear'); if (cy) cy.textContent = new Date().getFullYear();
+            const sm = localStorage.getItem('darkMode'); if (sm === 'enabled') document.body.classList.replace('light-mode', 'dark-mode');
+        });
+    </script>
+</body>
+</html> 
